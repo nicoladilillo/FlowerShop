@@ -7,20 +7,21 @@
   </head>
 
   <body>
-    <div class="signup">
-      <form action="sign.php" method="post">
+
+      <form action="sign.php" method="post" class="form-signup">
+        <div class="errors"></div>
         <input name="username" type="text" placeholder="username" />
         <input name="password" type="password" placeholder="password" />
         <input name="confirmation" type="password" placeholder="confirmation password" />
         <input name="name" type="text" placeholder="name" />
         <input name="surname" type="text" placeholder="surname" />
         <input name="email" type="email" placeholder="email" />
-        <div>
-            <input type="submit" value="Sign Up" />
-            <input type="reset" value="Reset" />
-        </div>
+        <button type='submit'>SignUp</button>
+        <button type='button' class='login' onclick='window.open("log.php", "_self")'>Login</button>
       </form>
-    </div>
+
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="assets/js/upload.js"></script>
 
   </body>
 </html>

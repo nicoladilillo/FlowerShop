@@ -31,7 +31,7 @@ $('.form-signup').submit(function(event){
 
   $.ajax({
     type: "POST",
-    url: "validate_new_user.php",
+    url: "sign.php",
     data: formData,
     cache:false,
     contentType: false,
@@ -39,7 +39,6 @@ $('.form-signup').submit(function(event){
     dataType: 'text',
     success: function(msg)
     {
-
        if(msg !== "Successfully registered.") {
          $('.errors').html("<p style='color:red'>" + msg + "</p>");
        }
