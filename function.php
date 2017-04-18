@@ -71,7 +71,7 @@
             "
         );
         $row = $result->fetchAll(PDO::FETCH_OBJ);
-        if( $row === 0 ) return false;
+        if( !isset($row[0]) ) return false;
 
         $_SESSION['name'] = $row[0]->name;
         $_SESSION['surname'] = $row[0]->surname;
