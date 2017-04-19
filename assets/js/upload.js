@@ -46,3 +46,19 @@ $('.form-signup').submit(function(event){
     }
   });
 });
+
+$('.form-choice button').click(function(event){
+  event.preventDefault();
+  var choice = $(this).val();
+
+  $('.form-choice').hide();
+  $.ajax({
+    url: 'log.php',
+    success: function(data)
+    {
+      $('body').html(data);
+      $('strong').html(choice);
+      $('.form-signin').append("<input type='hidden' name='choice' value='" + choice +"' />")
+    }
+  });
+});

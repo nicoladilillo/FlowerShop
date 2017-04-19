@@ -8,12 +8,10 @@
     public $connection;
     private $conf;
     public $status = " "; //a testing variable
-    private $tabe;
 
     #constructor
     function __construct() {
 
-      $this->table = 'user';
       $this->conf = new Config();
     }
 
