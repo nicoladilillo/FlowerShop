@@ -1,8 +1,5 @@
 <?php
   include 'function.php';
-  include 'administrator.php';
-  include 'flower.php';
-  include 'normal.php';
 
   $password = $_POST['password'];
   $username = $_POST['username'];
