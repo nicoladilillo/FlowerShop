@@ -47,10 +47,12 @@
         $row = $result->fetchAll(PDO::FETCH_OBJ);
         if( !isset($row[0]) ) return false;
 
+        $_SESSION['id'] = $row[0]->ID;
+
         return true;
       }
 }
 
   include 'administrator/administrator.php';
-  include 'flower.php';
+  include 'flower/flower.php';
   include 'normal.php';
