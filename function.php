@@ -1,5 +1,4 @@
 <?php
-  session_start();
   include 'config.php';
 
   /************************** MYSQL HANDLER *************************/
@@ -55,4 +54,4 @@
 
   include 'administrator/administrator.php';
   include 'flower/flower.php';
-  include 'normal.php';
+  include 'normal/normal.php';
