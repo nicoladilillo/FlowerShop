@@ -1,25 +1,27 @@
 /*************** JS CODE USED FOR SIGN-UP and LOGIN ********/
-
-$('.form-signin').submit(function(event){
+$('.form-signin').submit(function(event) {
   event.preventDefault();
 
   var username = $('.username').val();
   var password = $('.password').val();
+  var choice = $('.choice').val();
 
   $.ajax({
     type: "POST",
     url: "login.php",
     data: {
       password: password,
-      username: username
+      username: username,
+      choice: choice
     },
+    dataType: 'text',
     dataType: 'text',
     success: function(msg)
     {
        if(msg !== "Authenticated.") {
          $('.errors').html("<p style='color:red'>" + msg + "</p>");
        }
-       else window.open("index.php", "_self");
+       else window.open(choice, "_self");
     }
   });
 });
@@ -43,22 +45,6 @@ $('.form-signup').submit(function(event){
          $('.errors').html("<p style='color:red'>" + msg + "</p>");
        }
        else $('.login').trigger('click');
-    }
-  });
-});
-
-$('.form-choice button').click(function(event){
-  event.preventDefault();
-  var choice = $(this).val();
-
-  $('.form-choice').hide();
-  $.ajax({
-    url: 'log.php',
-    success: function(data)
-    {
-      $('body').html(data);
-      $('strong').html(choice);
-      $('.form-signin').append("<input type='hidden' name='choice' value='" + choice +"' />")
     }
   });
 });

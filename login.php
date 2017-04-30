@@ -20,7 +20,7 @@
 
   #if authenticated
   if($data->logIn($username, $password)) {
-    echo "Authenticated like $data->table.";
+    echo "Authenticated.";
     exit;
   }
 

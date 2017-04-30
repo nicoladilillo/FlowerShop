@@ -6,3 +6,5 @@
   <button type='submit'>Login</button>
   <button type='button' onclick='window.open("signup.php", "_self")'>SignUp</button>
 </form>
+
+<script src="assets/js/upload.js"></script>

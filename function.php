@@ -54,4 +54,4 @@
 
   include 'administrator/administrator.php';
   include 'flower/flower.php';
-  include 'normal/normal.php';
+  include 'user/normal.php';

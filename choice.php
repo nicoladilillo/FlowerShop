@@ -5,14 +5,15 @@
     <title>Login</title>
   </head>
   <body>
-    <form method='post' class="form-choice">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+
+    <main>
       <button value="administrator">administrator</button>
       <button value="flower">flower</button>
       <button value="user">user</button>
-    </form>
+      <script src="assets/js/choice.js"></script>
+    </main>
 
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="assets/js/upload.js"></script>
 
   </body>
 </html>
