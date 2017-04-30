@@ -1,4 +1,5 @@
 <?php
+  session_start();
   include 'function.php';
 
   $password = $_POST['password'];

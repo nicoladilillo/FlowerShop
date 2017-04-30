@@ -1,13 +1,4 @@
-<?php
-  session_start();
-?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Administrator</title>
-  </head>
-  <body>
+<?php $type = "administrator"; require('../partial/head.php') ?>
 
     <div>
       <button value="add_flower.html">Add Flower</button>

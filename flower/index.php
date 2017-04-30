@@ -1,13 +1,5 @@
-<?php
-  session_start();
-?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Flower</title>
-  </head>
-  <body>
+<?php $type = "flower"; require('../partial/head.php'); ?>
+
     <button value="add_product.html">Add Product</button>
 
     <div>

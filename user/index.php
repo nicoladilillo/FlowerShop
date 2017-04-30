@@ -1,13 +1,4 @@
-<?php
-  session_start();
-?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>user</title>
-  </head>
-  <body>
+<?php $type = "user"; require('../partial/head.php'); ?>
 
     <form method="POST" action="count.php" class="buy">
 

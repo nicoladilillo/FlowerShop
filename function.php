@@ -47,6 +47,7 @@
         if( !isset($row[0]) ) return false;
 
         $_SESSION['id'] = $row[0]->ID;
+        $_SESSION['type'] = $this->table;
 
         return true;
       }
