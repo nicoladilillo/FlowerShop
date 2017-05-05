@@ -17,11 +17,13 @@
       <?php
         if ( !isset($_SESSION['id']) )
           require 'choice.php';
-        else {
-          echo "You are logged like " . $_SESSION['type'];
-          echo "<button type=button onclick=window.open('logout.php')>Log Out</button>";
-        };
-      ?>
+        else { ?>
+          <p>
+            You are logged like <?php echo($_SESSION['type']) ?>
+          </p>
+          <button type=button onclick="window.open('<?php echo($_SESSION['type']) ?>', '_self')">Go</button>
+          <button type=button onclick="window.open('logout.php', '_self')">Log Out</button>
+        <?php } ?>
     </main>
 
     <footer>

@@ -7,7 +7,7 @@ $('button').click(function(event){
     url: link,
     success: function(data)
     {
-      $('body').html(data);
+      $('main').html(data);
     }
   });
 })

@@ -2,8 +2,8 @@
 
     <button value="add_product.html">Add Product</button>
 
-    <div>
-    </div>
+    <main>
+    </main>
 
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../assets/js/router.js"></script>

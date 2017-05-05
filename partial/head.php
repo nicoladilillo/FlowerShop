@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if( strcmp($_SESSION['type'], $type) != 0 ) {
+  if( strcmp($_SESSION['type'], $type) != 0 || !isset($_SESSION['id']) ) {
     header_remove();
     header("Location: ../index.php");
   }
@@ -12,3 +12,4 @@
     <title><?php echo($type) ?></title>
   </head>
   <body>
+    Come back...<button type=button onclick="window.open('../', '_self')">Home</button><br />
