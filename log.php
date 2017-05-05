@@ -4,7 +4,6 @@
   <input name='username' class='username' placeholder='username' type='text' />
   <input name='password' class='password' placeholder='**********' type='password' />
   <button type='submit'>Login</button>
-  <button type='button' onclick='window.open("signup.php", "_self")'>SignUp</button>
 </form>
 
 <script src="assets/js/upload.js"></script>

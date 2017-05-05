@@ -1,5 +1,5 @@
 <?php
-  include 'function.php';
+  include '../function.php';
 
   $username = $_POST['username'];
   $password = $_POST['password'];
@@ -8,7 +8,7 @@
   $surname = $_POST['surname'];
   $email = $_POST['email'];
 
-  $data = new User;
+  $data = new Normal;
   $data->connectMysql();
 
   /******** CHECK SAME PASSWORD *******/

@@ -10,6 +10,8 @@ $('button').click(function(event) {
       $('main').html(data);
       $('strong').html(choice);
       $('.form-signin').append("<input type='hidden' name='choice' class='choice' value='" + choice +"' />")
+      if ( choice=="user" )
+        $('.form-signin').append('<button type=button onclick=window.open("user/signup.php")>SignUp</button>');
     }
   });
 });
