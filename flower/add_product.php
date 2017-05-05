@@ -10,3 +10,4 @@
   $data->connectMysql();
 
   $data->addProduct($name, $price, $description, $_SESSION['id']);
+  echo "Successfully add product.";

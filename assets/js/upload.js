@@ -15,7 +15,6 @@ $('.form-signin').submit(function(event) {
       choice: choice
     },
     dataType: 'text',
-    dataType: 'text',
     success: function(msg)
     {
        if(msg !== "Authenticated.") {

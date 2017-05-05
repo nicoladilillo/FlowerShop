@@ -10,6 +10,7 @@
   <head>
     <meta charset="utf-8">
     <title><?php echo($type) ?></title>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
   </head>
   <body>
     Come back...<button type=button onclick="window.open('../', '_self')">Home</button><br />
