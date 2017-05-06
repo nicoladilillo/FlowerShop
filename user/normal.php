@@ -41,4 +41,12 @@
       );
       return $result->fetchAll(PDO::FETCH_OBJ);
     }
+
+    public function purchase($product, $user, $quantity) {
+      $today = date("Y/m/d");
+      $this->connection->query(
+          "INSERT INTO purchase (id_user, id_product, Date, quantity)
+           VALUES ($user, $product, '$today', $quantity);"
+      );
+    }
   }

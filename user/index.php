@@ -8,7 +8,5 @@
       <button type="submit">Buy</button>
     </form>
 
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
-
   </body>
 </html>

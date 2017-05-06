@@ -1,17 +1,23 @@
-<?php
-  session_start();
-  include '../function.php';
+<?php $type = "user"; require('../partial/head.php'); ?>
 
-  $data = new Normal();
-  $data->connectMysql();
+  <?php
+    include '../function.php';
 
-  $row = $data->allProduct();
-  $import = 0;
-  $q = 0;
-  foreach ($row as $row)
-  {
-    $q = $_POST[$row->name];
-    $import = $import + ($q[0] * $row->price);
-  }
+    $data = new Normal();
+    $data->connectMysql();
 
-  echo "The price is: $import €";
+    $row = $data->allProduct();
+    $import = 0;
+    foreach ($row as $row)
+    {
+      if ( $_POST[$row->ID] > 0 ) {
+        $import = $import + ( $_POST[$row->ID] * $row->price );
+        $data->purchase($row->ID, $_SESSION['id'], $_POST[$row->ID]);
+      }
+    }
+
+    echo "The price is: $import €";
+  ?>
+
+</body>
+</html>

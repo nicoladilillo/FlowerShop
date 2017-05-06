@@ -12,7 +12,7 @@
         <h2>".strtoupper($row->name)."</h2>
         <div class='prezzo'>
           <p>".$row->price." €</p>
-          <input name='".$row->name."' type='number' value='0' />
+          <input name='".$row->ID."' type='number' value='0' />
         </div>
       </div>
     ";
