@@ -14,4 +14,21 @@
          VALUES('$name', $price, $flower, '$description');"
       ) or die($this->connection->error);
     }
+
+    #See all product to send
+    public function allProduct($flower) {
+      $result = $this->connection->query(
+          "SELECT *
+           FROM product
+           WHERE id_flower=$flower;"
+      );
+      return $result->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    public function removeProduct($id, $flower) {
+      return $this->connection->query(
+        "DELETE FROM product
+        WHERE ID=$id and id_flower='$flower';"
+      );
+    }
   }

@@ -5,6 +5,7 @@ $('button').click(function(event){
   $('.button').hide();
   $.ajax({
     url: link,
+    cache: false,
     success: function(data)
     {
       $('main').html(data);

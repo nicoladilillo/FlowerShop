@@ -4,6 +4,7 @@
     header_remove();
     header("Location: ../index.php");
   }
+  else {
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,3 +15,4 @@
   </head>
   <body>
     Come back...<button type=button onclick="window.open('../', '_self')">Home</button><br />
+<?php } ?>
