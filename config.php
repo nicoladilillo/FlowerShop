@@ -1,7 +1,7 @@
 <?php
   class Config {
       public $servername = 'localhost';
-      public $username = 'root';
-      public $password = '';
+      public $username = 'vagrant';
+      public $password = 'vagrant';
       public $dbname = 'fioraio';
   }

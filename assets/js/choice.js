@@ -3,15 +3,16 @@ $('button').click(function(event) {
   var choice = $(this).val();
 
   $.ajax({
-    type: 'POST',
     url: 'log.php',
     success: function(data)
     {
       $('main').html(data);
       $('strong').html(choice);
-      $('.form-signin').append("<input type='hidden' name='choice' class='choice' value='" + choice +"' />")
-      if ( choice=="user" )
+      $('.choice').val(choice);
+      if ( choice == "user" )
         $('.form-signin').append('<button type=button onclick=window.open("user/signup.php")>SignUp</button>');
+      if ( choice == "flower" )
+        $('.form-signin').append('<p>Contact an administrator to Sign Up</p>');
     }
   });
 });
