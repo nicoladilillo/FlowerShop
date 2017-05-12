@@ -49,4 +49,13 @@
            VALUES ($user, $product, '$today', $quantity);"
       );
     }
+
+    public function listPurchase($user) {
+      $result = $this->connection->query(
+          "SELECT *
+           FROM (product p INNER JOIN purchase pu ON (p.ID=pu.id_product))
+           INNER JOIN user u ON (pu.id_user=u.ID);"
+      );
+      return $result->fetchAll(PDO::FETCH_OBJ);
+    }
   }

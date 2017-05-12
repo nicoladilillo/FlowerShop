@@ -1,7 +1,6 @@
 <?php
   session_start();
   if( strcmp($_SESSION['type'], $type) != 0 || !isset($_SESSION['id']) ) {
-    header_remove();
     header("Location: ../index.php");
   }
   else {
