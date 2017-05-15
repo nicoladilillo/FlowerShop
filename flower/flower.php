@@ -47,4 +47,16 @@
         WHERE ID=$id and id_flower='$flower';"
       );
     }
+
+    public function listTrade($flower) {
+      $result = $this->connection->query(
+        "SELECT p.name name, p.price price, pu.quantity quantity,
+                pu.Date date, u.username username
+        FROM (product p INNER JOIN purchase pu ON (p.ID=pu.id_product))
+              INNER JOIN flower f ON (p.id_flower=f.ID)
+              INNER JOIN user u ON (pu.id_user=u.ID)
+        WHERE p.id_flower=$flower;"
+      );
+      return $result->fetchAll(PDO::FETCH_OBJ);
+    }
   }
