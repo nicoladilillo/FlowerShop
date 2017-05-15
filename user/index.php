@@ -1,5 +1,5 @@
 <?php $type = "user"; require('../partial/head.php'); ?>
-	
+
 	<button value="list_purchase.php">List Purchase</button>
 
 	<main>
@@ -8,7 +8,7 @@
 	      <?php
 	        require 'all_product.php';
 	      ?>
-	      <button type="submit">Buy</button>
+	      <input type="submit" value="Buy" />
 	    </form>
 	</main>
 

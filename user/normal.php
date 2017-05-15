@@ -52,7 +52,7 @@
 
     public function listPurchase($user) {
       $result = $this->connection->query(
-          "SELECT *
+          "SELECT p.name name, p.price price, pu.quantity quantity, pu.Date date
            FROM (product p INNER JOIN purchase pu ON (p.ID=pu.id_product))
            INNER JOIN user u ON (pu.id_user=u.ID);"
       );
