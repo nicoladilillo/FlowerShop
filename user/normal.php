@@ -36,8 +36,9 @@
     #See all product to buy
     public function allProduct() {
       $result = $this->connection->query(
-          "SELECT *
-           FROM product;"
+          "SELECT p.ID id, p.name name, p.price price,
+                  p.description description, f.name flower
+           FROM product p INNER JOIN flower f ON (p.id_flower=f.ID)"
       );
       return $result->fetchAll(PDO::FETCH_OBJ);
     }

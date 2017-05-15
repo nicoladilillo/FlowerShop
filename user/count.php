@@ -10,9 +10,9 @@
     $import = 0;
     foreach ($row as $row)
     {
-      if ( $_POST[$row->ID] > 0 ) {
-        $import = $import + ( $_POST[$row->ID] * $row->price );
-        $data->purchase($row->ID, $_SESSION['id'], $_POST[$row->ID]);
+      if ( $_POST[$row->id] > 0 ) {
+        $import = $import + ( $_POST[$row->id] * $row->price );
+        $data->purchase($row->id, $_SESSION['id'], $_POST[$row->id]);
       }
     }
 
