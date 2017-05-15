@@ -6,8 +6,8 @@
   <head>
     <meta charset="utf-8">
     <title>Flower Shop</title>
-    <script src="/vendor/components/jquery/dist/jquery.js"></script>
-    <link rel="icon" href="/assets/img/flower-icon.png">
+    <script src="./vendor/components/jquery/jquery.js"></script>
+    <link rel="icon" href="./assets/img/flower-icon.png">
   </head>
   <body>
     <header>
