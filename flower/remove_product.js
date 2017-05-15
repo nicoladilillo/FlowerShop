@@ -1,7 +1,6 @@
 $('main .remove').click(function(event){
   event.preventDefault();
   var id = $(this).val();
-  console.log(id);
 
   $.ajax({
     url: "remove_product.php",

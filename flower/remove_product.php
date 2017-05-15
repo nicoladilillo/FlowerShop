@@ -9,3 +9,5 @@
 
   if ( $data->removeProduct($id, $_SESSION['id']) )
     echo "Successfully remove product.";
+  else
+    echo "You can't remove this product";

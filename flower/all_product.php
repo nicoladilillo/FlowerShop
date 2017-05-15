@@ -7,11 +7,26 @@
 
   $row = $data->allProduct($_SESSION['id']);
   echo "<div class=message></div>";
-  echo "<form method=POST><ul>";
+  echo "<ul>";
   foreach ($row as $row) {
-    echo "<li id=$row->ID>" . $row->name . " " . $row->price . " " . $row->description . "
-          <button class=remove value=$row->ID>Remove</button><br /></li>";
+    echo "<li>" . strtoupper($row->name) . ": " . $row->price .
+          "€<br /><small style='color:grey'> " . $row->description . "</small><br />";
+    if ( $row->quantity == 0 )
+      echo "<button class=remove value=$row->id id=$row->id >Remove</button>";
+    else {
+      if ( $row->availability == 0 )
+        echo "<button class=unavailability value=$row->id id=$row->id >Set availability</button>";
+      else
+        echo "<button class=availability value=$row->id id=$row->id >Set unavailability</button>";
+    }
+    echo "</li><br />";
   }
-  echo "</form></ul>";
+  echo "</ul>";
 ?>
+
 <script src="remove_product.js"></script>
+<script src="set_unavailability.js"></script>
+<script src="set_availability.js"></script>
+<script>
+  $('main').unbind('click');
+</script>
