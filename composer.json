@@ -1,0 +1,6 @@
+{
+    "name": "root/fioraio",
+    "require": {
+        "components/jquery": "^3.2"
+    }
+}
