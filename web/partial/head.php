@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <title><?php echo($type) ?></title>
     <link rel="icon" href="./assets/img/flower-icon.png">
-    <script src="./vendor/components/jquery/jquery.js"></script>
+    <script src="../../vendor/components/jquery/jquery.js"></script>
   </head>
   <body>
     Come back...<button type=button onclick="window.open('../', '_self')">Home</button><br />
