@@ -6,7 +6,8 @@
   <head>
     <meta charset="utf-8">
     <title>Flower Shop</title>
-    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="/vendor/components/jquery/dist/jquery.js"></script>
+    <link rel="icon" href="/assets/img/flower-icon.png">
   </head>
   <body>
     <header>
