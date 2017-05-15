@@ -84,10 +84,11 @@ CREATE TABLE `product` (
   `price` float DEFAULT NULL,
   `id_flower` int(11) DEFAULT NULL,
   `description` text,
+  `availability` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`ID`),
   KEY `id_fioraio` (`id_flower`),
   CONSTRAINT `product_ibfk_1` FOREIGN KEY (`id_flower`) REFERENCES `flower` (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,7 +97,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (14,'Margerita',2.5,7,'Molto bella');
+INSERT INTO `product` VALUES (14,'Margerita',2.5,7,'Molto bella',0);
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -112,12 +113,13 @@ CREATE TABLE `purchase` (
   `Date` date DEFAULT NULL,
   `id_user` int(11) DEFAULT NULL,
   `id_product` int(11) DEFAULT NULL,
+  `quantity` int(11) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `id_user` (`id_user`),
   KEY `id_product` (`id_product`),
   CONSTRAINT `purchase_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`ID`),
   CONSTRAINT `purchase_ibfk_2` FOREIGN KEY (`id_product`) REFERENCES `product` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -126,6 +128,7 @@ CREATE TABLE `purchase` (
 
 LOCK TABLES `purchase` WRITE;
 /*!40000 ALTER TABLE `purchase` DISABLE KEYS */;
+INSERT INTO `purchase` VALUES (1,'2017-05-15',5,14,1),(2,'2017-05-15',5,14,1),(3,'2017-05-15',5,14,4);
 /*!40000 ALTER TABLE `purchase` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -166,4 +169,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-11 22:09:17
+-- Dump completed on 2017-05-15 20:25:44
