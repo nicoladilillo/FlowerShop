@@ -1,9 +1,19 @@
 <?php
   class Config {
-      $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-      public $servername = $url["host"];
-      public $username = $url["user"];
-      public $password = $url["pass"];
-      public $dbname = substr($url["path"], 1);
+      public $servername;
+      public $username;
+      public $password;
+      public $dbname;
+
+      #constructor
+      function __construct() {
+
+        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+        this->$servername = $url["host"];
+        this->$username = $url["user"];
+        this->$password = $url["pass"];
+        this->$dbname = substr($url["path"], 1);
+      }
   }
