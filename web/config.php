@@ -1,6 +1,4 @@
 <?php
-  $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
   class Config {
 
       public $servername;
@@ -10,6 +8,8 @@
 
       #constructor
       function __construct() {
+
+        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
         $this->$servername = $url["host"];
         $this->$username = $url["user"];
