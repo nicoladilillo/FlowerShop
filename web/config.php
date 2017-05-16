@@ -11,9 +11,9 @@
       #constructor
       function __construct() {
 
-        this->$servername = $url["host"];
-        this->$username = $url["user"];
-        this->$password = $url["pass"];
-        this->$dbname = substr($url["path"], 1);
+        $this->$servername = $url["host"];
+        $this->$username = $url["user"];
+        $this->$password = $url["pass"];
+        $this->$dbname = substr($url["path"], 1);
       }
   }
